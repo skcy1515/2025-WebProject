@@ -98,7 +98,7 @@
         border-radius: 12px;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         text-align: center;
-        max-width: 1200px;
+        max-width: 1000px;
         width: 100%;
       }
       .result-table {
@@ -109,6 +109,47 @@
       }
       small {
         color: gray;
+      }
+      .result-table {
+        font-size: 16px;
+      }
+      p {
+        font-size: 18px;
+      }
+      th,
+      td {
+        padding: 10px;
+      }
+      @media (max-width: 768px) {
+        header {
+          height: 100px; /* 모바일에서 헤더 높이 증가 */
+        }
+
+        section {
+          padding-top: 100px; /* 모바일에서 더 넓게 */
+        }
+        .logo {
+          height: 45px;
+          margin-left: 10px;
+          margin-right: 40px;
+        }
+        .nav a {
+          font-size: 18px;
+        }
+        footer {
+          padding: 10px;
+        }
+        .footer-container {
+          font-size: 12px;
+          gap: 10px;
+        }
+        .result-table {
+          font-size: 13px;
+        }
+        th,
+        td {
+          padding: 3px;
+        }
       }
     </style>
   </head>
@@ -139,7 +180,7 @@
             alt="YouTube 썸네일"
             style="
               width: 100%;
-              max-width: 600px;
+              max-width: 500px;
               border-radius: 10px;
               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             "

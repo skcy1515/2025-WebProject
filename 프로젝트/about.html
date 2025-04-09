@@ -89,6 +89,30 @@
         flex-wrap: wrap;
         text-align: center;
       }
+      @media (max-width: 768px) {
+        header {
+          height: 100px; /* 모바일에서 헤더 높이 증가 */
+        }
+
+        section {
+          padding-top: 100px; /* 모바일에서 더 넓게 */
+        }
+        .logo {
+          height: 45px;
+          margin-left: 10px;
+          margin-right: 40px;
+        }
+        .nav a {
+          font-size: 18px;
+        }
+        footer {
+          padding: 10px;
+        }
+        .footer-container {
+          font-size: 12px;
+          gap: 10px;
+        }
+      }
     </style>
   </head>
   <body>
