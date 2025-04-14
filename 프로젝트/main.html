@@ -12,6 +12,15 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider CSS & JS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <style>
       html,
       body {
@@ -104,6 +113,11 @@
       .result-table {
         margin: 0 auto;
       }
+      .result-slider {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
       .result-box img {
         margin: 15px;
       }
@@ -118,7 +132,60 @@
       }
       th,
       td {
-        padding: 10px;
+        padding: 14px;
+      }
+      .slick-arrow-container {
+        display: flex;
+        justify-content: center; /* 버튼을 가운데 정렬 */
+        gap: 600px; /* 버튼 간 간격 설정 */
+        margin-top: 10px; /* 필요 시 위쪽 여백 */
+        margin-bottom: 10px; /* 필요 시 위쪽 여백 */
+      }
+      .slick-prev,
+      .slick-next {
+        padding: 10px 20px; /* 버튼 내부 여백 */
+        font-size: 18px; /* 글자 크기 */
+        background-color: #c61414; /* 배경색 (선택사항) */
+        color: white; /* 글자색 */
+        border: none; /* 테두리 제거 */
+        border-radius: 8px; /* 둥근 모서리 */
+        cursor: pointer;
+      }
+      .table-calander {
+        width: 100%;
+        max-width: 900px;
+        margin: 30px auto 0;
+        border-collapse: collapse;
+        font-size: 16px;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .table-calander th {
+        background-color: #c61414; /* 검정 헤더 */
+        color: white;
+        padding: 16px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .table-calander td {
+        font-size: 18px;
+        padding: 14px;
+        text-align: center;
+        color: #444;
+        font-weight: 500;
+      }
+
+      .table-calander tbody tr:nth-child(even) {
+        background-color: #f3f3f3; /* 줄무늬 배경 */
+      }
+
+      .table-calander tbody tr:nth-child(odd) {
+        background-color: #ffffff;
       }
       @media (max-width: 768px) {
         header {
@@ -144,11 +211,24 @@
           gap: 10px;
         }
         .result-table {
-          font-size: 13px;
+          font-size: 10px;
         }
         th,
         td {
           padding: 3px;
+        }
+        .slick-arrow-container {
+          gap: 200px;
+        }
+        .slick-prev,
+        .slick-next {
+          padding: 10px 20px; /* 버튼 내부 여백 */
+          font-size: 14px; /* 글자 크기 */
+        }
+        .table-calander th,
+        .table-calander td {
+          font-size: 10px;
+          padding: 10px;
         }
       }
     </style>
@@ -170,15 +250,163 @@
     </header>
 
     <section>
-      <h1>F1 최근 경기</h1>
+      <h1>2025 F1 경기 일정</h1>
+      <br />
+      <div class="result-box">
+        <img
+          src="images/2025F1.png"
+          style="
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+          "
+        />
+        <table class="table-calander">
+          <thead>
+            <tr>
+              <th>날짜</th>
+              <th>국가</th>
+              <th>서킷</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3월 14~16일</td>
+              <td>오스트레일리아</td>
+              <td>멜버른</td>
+            </tr>
+            <tr>
+              <td>3월 21~23일</td>
+              <td>중국</td>
+              <td>상하이</td>
+            </tr>
+            <tr>
+              <td>4월 4~6일</td>
+              <td>일본</td>
+              <td>스즈카</td>
+            </tr>
+            <tr>
+              <td>4월 11~13일</td>
+              <td>바레인</td>
+              <td>사키르</td>
+            </tr>
+            <tr>
+              <td>4월 18~20일</td>
+              <td>사우디아라비아</td>
+              <td>제다</td>
+            </tr>
+            <tr>
+              <td>5월 2~4일</td>
+              <td>미국</td>
+              <td>마이애미</td>
+            </tr>
+            <tr>
+              <td>5월 16~18일</td>
+              <td>이탈리아</td>
+              <td>이몰라</td>
+            </tr>
+            <tr>
+              <td>5월 23~25일</td>
+              <td>모나코</td>
+              <td>모나코</td>
+            </tr>
+            <tr>
+              <td>5월 30일~6월 1일</td>
+              <td>스페인</td>
+              <td>바르셀로나</td>
+            </tr>
+            <tr>
+              <td>6월 13~15일</td>
+              <td>캐나다</td>
+              <td>몬트리올</td>
+            </tr>
+            <tr>
+              <td>6월 27~29일</td>
+              <td>오스트리아</td>
+              <td>슈필버그</td>
+            </tr>
+            <tr>
+              <td>7월 4~6일</td>
+              <td>영국</td>
+              <td>실버스톤</td>
+            </tr>
+            <tr>
+              <td>7월 25~27일</td>
+              <td>벨기에</td>
+              <td>스파</td>
+            </tr>
+            <tr>
+              <td>8월 1~3일</td>
+              <td>헝가리</td>
+              <td>부다페스트</td>
+            </tr>
+            <tr>
+              <td>8월 29~31일</td>
+              <td>네덜란드</td>
+              <td>잔드보르트</td>
+            </tr>
+            <tr>
+              <td>9월 5~7일</td>
+              <td>이탈리아</td>
+              <td>몬차</td>
+            </tr>
+            <tr>
+              <td>9월 19~21일</td>
+              <td>아제르바이잔</td>
+              <td>바쿠</td>
+            </tr>
+            <tr>
+              <td>10월 3~5일</td>
+              <td>싱가포르</td>
+              <td>싱가포르</td>
+            </tr>
+            <tr>
+              <td>10월 17~19일</td>
+              <td>미국</td>
+              <td>오스틴</td>
+            </tr>
+            <tr>
+              <td>10월 24~26일</td>
+              <td>멕시코</td>
+              <td>멕시코시티</td>
+            </tr>
+            <tr>
+              <td>11월 7~9일</td>
+              <td>브라질</td>
+              <td>상파울루</td>
+            </tr>
+            <tr>
+              <td>11월 20~22일</td>
+              <td>미국</td>
+              <td>라스베이거스</td>
+            </tr>
+            <tr>
+              <td>11월 28~30일</td>
+              <td>카타르</td>
+              <td>루사일</td>
+            </tr>
+            <tr>
+              <td>12월 5~7일</td>
+              <td>아부다비</td>
+              <td>야스 마리나</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <h1>2025 F1 최근 경기</h1>
       <br />
       <div class="result-box">
         <h2>2025 일본 GP 결과</h2>
-        <a href="https://www.youtube.com/watch?v=l2dA6Yn62kE" target="_blank">
+        <a href="https://www.youtube.com/watch?v=or9ooNWaqKU" target="_blank">
           <img
-            src="https://img.youtube.com/vi/l2dA6Yn62kE/hqdefault.jpg"
+            src="https://img.youtube.com/vi/or9ooNWaqKU/hqdefault.jpg"
             alt="YouTube 썸네일"
             style="
+              display: block;
+              margin: 0 auto;
               width: 100%;
               max-width: 500px;
               border-radius: 10px;
@@ -192,6 +420,7 @@
           <thead>
             <tr>
               <th>순위</th>
+              <th>국가</th>
               <th>드라이버</th>
               <th>팀</th>
               <th>시간</th>
@@ -201,6 +430,7 @@
           <tbody>
             <tr>
               <td>1</td>
+              <td>네덜란드</td>
               <td>M. 페르스타펀</td>
               <td>레드불</td>
               <td>1:22:06.983</td>
@@ -208,6 +438,7 @@
             </tr>
             <tr>
               <td>2</td>
+              <td>영국</td>
               <td>L. 노리스</td>
               <td>맥라렌</td>
               <td>+1.423s</td>
@@ -215,6 +446,7 @@
             </tr>
             <tr>
               <td>3</td>
+              <td>오스트레일리아</td>
               <td>O. 피아스트리</td>
               <td>맥라렌</td>
               <td>+2.129s</td>
@@ -222,6 +454,7 @@
             </tr>
             <tr>
               <td>4</td>
+              <td>모나코</td>
               <td>C. 르클레르</td>
               <td>페라리</td>
               <td>+16.097s</td>
@@ -229,6 +462,7 @@
             </tr>
             <tr>
               <td>5</td>
+              <td>영국</td>
               <td>G. 러셀</td>
               <td>메르세데스</td>
               <td>+17.362s</td>
@@ -238,58 +472,157 @@
         </table>
       </div>
       <br />
-      <div class="result-box">
-        <h2>2025 일본 GP 결과</h2>
-        <p>일시: 4월 6일 (일) 오후 2:00<br />트랙: 스즈카 서킷</p>
-        <table class="result-table">
-          <thead>
-            <tr>
-              <th>순위</th>
-              <th>드라이버</th>
-              <th>팀</th>
-              <th>시간</th>
-              <th>승점</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>M. 페르스타펀</td>
-              <td>레드불</td>
-              <td>1:22:06.983</td>
-              <td>25</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>L. 노리스</td>
-              <td>맥라렌</td>
-              <td>+1.423s</td>
-              <td>18</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>O. 피아스트리</td>
-              <td>맥라렌</td>
-              <td>+2.129s</td>
-              <td>15</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>C. 르클레르</td>
-              <td>페라리</td>
-              <td>+16.097s</td>
-              <td>12</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>G. 러셀</td>
-              <td>메르세데스</td>
-              <td>+17.362s</td>
-              <td>10</td>
-            </tr>
-          </tbody>
-        </table>
+      <h1>2025 F1 지난 경기</h1>
+      <div class="result-slider">
+        <div class="result-box">
+          <h2>2025 중국 GP 결과</h2>
+          <a href="https://www.youtube.com/watch?v=Hml6MaRRkn8" target="_blank">
+            <img
+              src="https://img.youtube.com/vi/Hml6MaRRkn8/hqdefault.jpg"
+              alt="YouTube 썸네일"
+              style="
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 500px;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+              "
+            />
+          </a>
+          <p><small>클릭 시 유튜브로 이동합니다.</small></p>
+          <p>일시: 3월 23일 (일) 오후 4:00<br />트랙: 상하이 인터내셔널 서킷</p>
+          <table class="result-table">
+            <thead>
+              <tr>
+                <th>순위</th>
+                <th>국가</th>
+                <th>드라이버</th>
+                <th>팀</th>
+                <th>시간</th>
+                <th>승점</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>오스트레일리아</td>
+                <td>O. 피아스트리</td>
+                <td>맥라렌</td>
+                <td>1:30:55.026</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>영국</td>
+                <td>L. 노리스</td>
+                <td>맥라렌</td>
+                <td>+9.748s</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>영국</td>
+                <td>G. 러셀</td>
+                <td>메르세데스</td>
+                <td>+11.097s</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>네덜란드</td>
+                <td>M. 페르스타펀</td>
+                <td>레드불</td>
+                <td>+16.656s</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>모나코</td>
+                <td>C. 르클레르</td>
+                <td>페라리</td>
+                <td>+56랩</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="result-box">
+          <h2>2025 일본 GP 결과</h2>
+          <a href="https://www.youtube.com/watch?v=or9ooNWaqKU" target="_blank">
+            <img
+              src="https://img.youtube.com/vi/or9ooNWaqKU/hqdefault.jpg"
+              alt="YouTube 썸네일"
+              style="
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 500px;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+              "
+            />
+          </a>
+          <p><small>클릭 시 유튜브로 이동합니다.</small></p>
+          <p>일시: 4월 6일 (일) 오후 2:00<br />트랙: 스즈카 서킷</p>
+          <table class="result-table">
+            <thead>
+              <tr>
+                <th>순위</th>
+                <th>국가</th>
+                <th>드라이버</th>
+                <th>팀</th>
+                <th>시간</th>
+                <th>승점</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>네덜란드</td>
+                <td>M. 페르스타펀</td>
+                <td>레드불</td>
+                <td>1:22:06.983</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>영국</td>
+                <td>L. 노리스</td>
+                <td>맥라렌</td>
+                <td>+1.423s</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>오스트레일리아</td>
+                <td>O. 피아스트리</td>
+                <td>맥라렌</td>
+                <td>+2.129s</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>모나코</td>
+                <td>C. 르클레르</td>
+                <td>페라리</td>
+                <td>+16.097s</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>영국</td>
+                <td>G. 러셀</td>
+                <td>메르세데스</td>
+                <td>+17.362s</td>
+                <td>10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+      <div class="slick-arrow-container"></div>
+      <!-- 버튼 나올 자리 -->
     </section>
 
     <footer>
@@ -313,5 +646,19 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".result-slider").slick({
+          dots: false, // ← 숫자 점 네비게이션 숨김
+          arrows: true, // ← 이전/다음 화살표 표시
+          autoplay: true,
+          autoplaySpeed: 5000,
+          adaptiveHeight: true,
+          appendArrows: $(".slick-arrow-container"), // 버튼을 지정한 div에 삽입
+          prevArrow: "<button type='button' class='slick-prev'>이전</button>",
+          nextArrow: "<button type='button' class='slick-next'>다음</button>",
+        });
+      });
+    </script>
   </body>
 </html>
