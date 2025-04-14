@@ -124,15 +124,8 @@
       small {
         color: gray;
       }
-      .result-table {
-        font-size: 16px;
-      }
       p {
         font-size: 18px;
-      }
-      th,
-      td {
-        padding: 14px;
       }
       .slick-arrow-container {
         display: flex;
@@ -187,6 +180,42 @@
       .table-calander tbody tr:nth-child(odd) {
         background-color: #ffffff;
       }
+      .table-calander2 {
+        width: 100%;
+        max-width: 900px;
+        margin: 30px auto 0;
+        border-collapse: collapse;
+        font-size: 16px;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .table-calander2 th {
+        background-color: #c61414; /* 검정 헤더 */
+        color: white;
+        padding: 16px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .table-calander2 td {
+        font-size: 18px;
+        padding: 14px;
+        text-align: center;
+        color: #444;
+        font-weight: 500;
+      }
+
+      .table-calander2 tbody tr:nth-child(even) {
+        background-color: #f3f3f3; /* 줄무늬 배경 */
+      }
+
+      .table-calander2 tbody tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
       @media (max-width: 768px) {
         header {
           height: 100px; /* 모바일에서 헤더 높이 증가 */
@@ -210,13 +239,6 @@
           font-size: 12px;
           gap: 10px;
         }
-        .result-table {
-          font-size: 10px;
-        }
-        th,
-        td {
-          padding: 3px;
-        }
         .slick-arrow-container {
           gap: 200px;
         }
@@ -227,8 +249,13 @@
         }
         .table-calander th,
         .table-calander td {
-          font-size: 10px;
-          padding: 10px;
+          font-size: 13px;
+          padding: 7px;
+        }
+        .table-calander2 th,
+        .table-calander2 td {
+          font-size: 9px;
+          padding: 5px;
         }
       }
     </style>
@@ -416,7 +443,7 @@
         </a>
         <p><small>클릭 시 유튜브로 이동합니다.</small></p>
         <p>일시: 4월 6일 (일) 오후 2:00<br />트랙: 스즈카 서킷</p>
-        <table class="result-table">
+        <table class="table-calander2">
           <thead>
             <tr>
               <th>순위</th>
@@ -492,7 +519,7 @@
           </a>
           <p><small>클릭 시 유튜브로 이동합니다.</small></p>
           <p>일시: 3월 23일 (일) 오후 4:00<br />트랙: 상하이 인터내셔널 서킷</p>
-          <table class="result-table">
+          <table class="table-calander2">
             <thead>
               <tr>
                 <th>순위</th>
@@ -565,7 +592,7 @@
           </a>
           <p><small>클릭 시 유튜브로 이동합니다.</small></p>
           <p>일시: 4월 6일 (일) 오후 2:00<br />트랙: 스즈카 서킷</p>
-          <table class="result-table">
+          <table class="table-calander2">
             <thead>
               <tr>
                 <th>순위</th>
