@@ -74,12 +74,18 @@
         font-weight: bold;
         font-size: 24px;
       }
+      section h1 {
+        margin-top: 20px;
+      }
 
       footer {
         background-color: #3d4043;
         color: white;
         padding: 20px;
         text-align: center;
+      }
+      summary{
+        margin-top: 20px;
       }
 
       .footer-container {
@@ -89,6 +95,69 @@
         gap: 60px;
         flex-wrap: wrap;
         text-align: center;
+      }
+      .champion-box  {
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 1000px;
+        width: 100%;
+      }
+      .championship-champion {
+        width: 100%;
+        max-width: 900px;
+        margin: 20px auto 0;
+        border-collapse: collapse;
+        font-size: 16px;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .championship-champion th {
+        background-color: #c61414; /* 검정 헤더 */
+        color: white;
+        padding: 16px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .championship-champion td {
+        font-size: 18px;
+        padding: 14px;
+        text-align: center;
+        color: #444;
+        font-weight: 500;
+      }
+      .champion-header {
+        background-color: #c61414; /* 검정 헤더 */
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 16px;
+        text-align: left; /* 가운데 정렬 */
+        margin-left: 50%; /* 테이블을 가운데로 정렬 */
+        position: relative;
+        align-items: center;
+        justify-content: center;
+      }
+      .driver-champion {
+        width: 100%;
+        max-width: 900px;
+        margin: 30px auto 0;
+        border-collapse: collapse;
+        font-size: 16px;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .flag {
+        width: 90px;
+        height: 60px;
+        margin-right: 10px;
       }
       #mainHeader {
         transition: top 0.3s ease-in-out;
@@ -135,7 +204,483 @@
       </div>
     </header>
 
-    <section></section>
+    <section>
+       <h1>역대 챔피언</h1>
+       <br>
+       <div class="champion-box">
+        <table class="driver-champion">
+          <tbody class="champion-header">
+            <tr>
+                <td rowspan="2" style="text-align: right;"><img src="./images/logo.png" class="logo" alt="로고" /></td>
+              <td><small>포뮬러 1 월드 챔피언십</small></td>
+            </tr>
+            <tr>
+              <td>역대 드라이버 챔피언</td>
+            </tr>
+          </tbody>
+        </table>
+        <details>
+          <summary>[펼치기/접기]</summary>
+          <table class="championship-champion">
+            <tbody>
+              <tr>
+                <th>1950</th>
+                <th>1951</th>
+                <th>1952</th>
+                <th>1953</th>
+              </tr>
+              <tr>
+                <td><img src="./images/IT.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/AR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/IT.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/IT.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>주세페 파리나</td>
+                <td>후안 마누엘 판지오</td>
+                <td>알베르토 아스카리</td>
+                <td>알베르토 아스카리</td>
+              </tr>
+              <tr>
+                <td>알파 로메오</td>
+                <td>알파 로메오</td>
+                <td>페라리</td>
+                <td>페라리</td>
+              </tr>
+              <tr>
+                <th>1954</th>
+                <th>1955</th>
+                <th>1956</th>
+                <th>1957</th>
+              </tr>
+              <tr>
+                <td><img src="./images/AR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/AR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/AR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/AR.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>후안 마누엘 판지오</td>
+                <td>후안 마누엘 판지오</td>
+                <td>후안 마누엘 판지오</td>
+                <td>후안 마누엘 판지오</td>
+              </tr>
+              <tr>
+                <td>다임러 벤츠</td>
+                <td>다임러 벤츠</td>
+                <td>페라리</td>
+                <td>마세라티</td>
+              </tr>
+              <tr>
+                <th>1958</th>
+                <th>1959</th>
+                <th>1960</th>
+                <th>1961</th>
+              </tr>
+              <tr>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/AU.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/AU.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/US.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>마이크 호손</td>
+                <td>잭 브라밤</td>
+                <td>잭 브라밤</td>
+                <td>필 힐</td>
+              </tr>
+              <tr>
+                <td>페라리</td>
+                <td>쿠퍼</td>
+                <td>쿠퍼</td>
+                <td>페라리</td>
+              </tr>
+              <tr>
+                <th>1962</th>
+                <th>1963</th>
+                <th>1964</th>
+                <th>1965</th>
+              </tr>
+              <tr>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>그레이엄 힐</td>
+                <td>짐 클락</td>
+                <td>존 서티스</td>
+                <td>짐 클락</td>
+              </tr>
+              <tr>
+                <td>BRM</td>
+                <td>로터스</td>
+                <td>페라리</td>
+                <td>로터스</td>
+              </tr>
+              <tr>
+                <th>1966</th>
+                <th>1967</th>
+                <th>1968</th>
+                <th>1969</th>
+              </tr>
+              <tr>
+                <td><img src="./images/AU.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/NZ.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>잭 브라밤</td>
+                <td>데니 흄</td>
+                <td>그레이엄 힐</td>
+                <td>재키 스튜어트</td>
+              </tr>
+              <tr>
+                <td>브라밤</td>
+                <td>브라밤</td>
+                <td>로터스</td>
+                <td>마트라</td>
+              </tr>
+              <tr>
+                <th>1970</th>
+                <th>1971</th>
+                <th>1972</th>
+                <th>1973</th>
+              </tr>
+              <tr>
+                <td><img src="./images/AT.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/BR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>요헨 린트</td>
+                <td>재키 스튜어트</td>
+                <td>에머슨 피티팔디</td>
+                <td>재키 스튜어트</td>
+              </tr>
+              <tr>
+                <td>로터스</td>
+                <td>티렐</td>
+                <td>로터스</td>
+                <td>티렐</td>
+              </tr>
+              <tr>
+                <th>1974</th>
+                <th>1975</th>
+                <th>1976</th>
+                <th>1977</th>
+              </tr>
+              <tr>
+                <td><img src="./images/BR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/AT.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/AT.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>에머슨 피티팔디</td>
+                <td>니키 라우다</td>
+                <td>제임스 헌트</td>
+                <td>니키 라우다</td>
+              </tr>
+              <tr>
+                <td>멕라렌</td>
+                <td>페라리</td>
+                <td>멕라렌</td>
+                <td>페라리</td>
+              </tr>
+              <tr>
+                <th>1978</th>
+                <th>1979</th>
+                <th>1980</th>
+                <th>1981</th>
+              </tr>
+              <tr>
+                <td><img src="./images/US.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/ZA.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/AU.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/BR.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>마리오 안드레티</td>
+                <td>조디 셱터</td>
+                <td>앨런 존스</td>
+                <td>낼슨 피케</td>
+              </tr>
+              <tr>
+                <td>로터스</td>
+                <td>페라리</td>
+                <td>윌리엄스</td>
+                <td>브라밤</td>
+              </tr>
+              <tr>
+                <th>1982</th>
+                <th>1983</th>
+                <th>1984</th>
+                <th>1985</th>
+              </tr>
+              <tr>
+                <td><img src="./images/FI.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/BR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/AT.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/FR.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>케케 로즈버그</td>
+                <td>넬슨 피케</td>
+                <td>니키 라우다</td>
+                <td>알랭 프로스트</td>
+              </tr>
+              <tr>
+                <td>윌리엄스</td>
+                <td>브라밤</td>
+                <td>멕라렌</td>
+                <td>멕라렌</td>
+              </tr>
+              <tr>
+                <th>1986</th>
+                <th>1987</th>
+                <th>1988</th>
+                <th>1989</th>
+              </tr>
+              <tr>
+                <td><img src="./images/FR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/BR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/BR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/FR.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>알랭 프로스트</td>
+                <td>넬슨 피케</td>
+                <td>아일톤 세나</td>
+                <td>알랭 프로스트</td>
+              </tr>
+              <tr>
+                <td>멕라렌</td>
+                <td>윌리엄스</td>
+                <td>멕라렌</td>
+                <td>멕라렌</td>
+              </tr>
+              <tr>
+                <th>1990</th>
+                <th>1991</th>
+                <th>1992</th>
+                <th>1993</th>
+              </tr>
+              <tr>
+                <td><img src="./images/BR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/BR.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/FR.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>아일톤 세나</td>
+                <td>아일톤 세나</td>
+                <td>나이젤 만셀</td>
+                <td>알랭 프로스트</td>
+              </tr>
+              <tr>
+                <td>멕라렌</td>
+                <td>멕라렌</td>
+                <td>윌리엄스</td>
+                <td>윌리엄스</td>
+              </tr>
+              <tr>
+                <th>1994</th>
+                <th>1995</th>
+                <th>1996</th>
+                <th>1997</th>
+              </tr>
+              <tr>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/CA.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>미하엘 슈마허</td>
+                <td>미하엘 슈마허</td>
+                <td>데이먼 힐</td>
+                <td>자크 빌르너브</td>
+              </tr>
+              <tr>
+                <td>베네통</td>
+                <td>베네통</td>
+                <td>윌리엄스</td>
+                <td>윌리엄스</td>
+              </tr>
+              <tr>
+                <th>1998</th>
+                <th>1999</th>
+                <th>2000</th>
+                <th>2001</th>
+              </tr>
+              <tr>
+                <td><img src="./images/FI.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/FI.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>미카 하키넨</td>
+                <td>미카 하키넨</td>
+                <td>미하엘 슈마허</td>
+                <td>미하엘 슈마허</td>
+              </tr>
+              <tr>
+                <td>멕라렌</td>
+                <td>멕라렌</td>
+                <td>페라리</td>
+                <td>페라리</td>
+              </tr>
+              <tr>
+                <th>2002</th>
+                <th>2003</th>
+                <th>2004</th>
+                <th>2005</th>
+              </tr>
+              <tr>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/ES.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>미하엘 슈마허</td>
+                <td>미하엘 슈마허</td>
+                <td>미하엘 슈마허</td>
+                <td>페르난도 알론소</td>
+              </tr>
+              <tr>
+                <td>페라리</td>
+                <td>페라리</td>
+                <td>페라리</td>
+                <td>르노</td>
+              </tr>
+              <tr>
+                <th>2006</th>
+                <th>2007</th>
+                <th>2008</th>
+                <th>2009</th>
+              </tr>
+              <tr>
+                <td><img src="./images/ES.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/FI.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>페르난도 알론소</td>
+                <td>키미 라이코넨</td>
+                <td>루이스 해밀턴</td>
+                <td>젠슨 버튼</td>
+              </tr>
+              <tr>
+                <td>르노</td>
+                <td>페라리</td>
+                <td>멕라렌</td>
+                <td>브런 GP</td>
+              </tr>
+              <tr>
+                <th>2010</th>
+                <th>2011</th>
+                <th>2012</th>
+                <th>2013</th>
+              </tr>
+              <tr>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>세바스티안 베텔</td>
+                <td>세바스티안 베텔</td>
+                <td>세바스티안 베텔</td>
+                <td>세바스티안 베텔</td>
+              </tr>
+              <tr>
+                <td>레드불</td>
+                <td>레드불</td>
+                <td>레드불</td>
+                <td>레드불</td>
+              </tr>
+              <tr>
+                <th>2014</th>
+                <th>2015</th>
+                <th>2016</th>
+                <th>2017</th>
+              </tr>
+              <tr>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/DE.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>루이스 해밀턴</td>
+                <td>루이스 해밀턴</td>
+                <td>니코 로즈버그</td>
+                <td>루이스 해밀턴</td>
+              </tr>
+              <tr>
+                <td>메르세데스</td>
+                <td>메르세데스</td>
+                <td>메르세데스</td>
+                <td>메르세데스</td>
+              </tr>
+              <tr>
+                <th>2010</th>
+                <th>2011</th>
+                <th>2012</th>
+                <th>2013</th>
+              </tr>
+              <tr>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/GB.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/NL.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>루이스 해밀턴</td>
+                <td>루이스 해밀턴</td>
+                <td>루이스 해밀턴</td>
+                <td>막스 베르스타펜</td>
+              </tr>
+              <tr>
+                <td>메르세데스</td>
+                <td>메르세데스</td>
+                <td>메르세데스</td>
+                <td>레드불</td>
+              </tr>
+              <tr>
+                <th>2022</th>
+                <th>2023</th>
+                <th>2024</th>
+                <th>2025</th>
+              </tr>
+              <tr>
+                <td><img src="./images/NL.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/NL.gif" class="flag" alt="국기"></td>
+                <td><img src="./images/NL.gif" class="flag" alt="국기"></td>
+              </tr>
+              <tr>
+                <td>막스 베르스타펜</td>
+                <td>막스 베르스타펜</td>
+                <td>막스 베르스타펜</td>
+              </tr>
+              <tr>
+                <td>레드불</td>
+                <td>레드불</td>
+                <td>레드불</td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
+       </div>
+    </section>
 
     <footer>
       <div class="footer-container">
@@ -151,7 +696,7 @@
           <p>
             &copy; Formula 1 Korean Page. 이 사이트는 웹프로젝트로 제작된
             사이트입니다.
-          </p>
+          </p> 
           <p>영상 및 이미지 등 일부 콘텐츠는 원저작권자에게 귀속됩니다.</p>
           <p>제작자: 김찬영, 권상원, 이승훈</p>
         </div>
